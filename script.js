@@ -86,4 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
             renderData();
         }
     });
+
+    document.querySelector("#delete-all").addEventListener("click", () => {
+        taskArray.length = 0;
+        renderData();
+        saveData();
+    })
 })

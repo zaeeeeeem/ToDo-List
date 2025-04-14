@@ -60,6 +60,17 @@ body {
     font-weight: bold;
 }
 
+#delete-all {
+    width: 350px;
+    background-color: #d11a2a;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    margin-top: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 #task-list {
     list-style: none;
     display: flex;
