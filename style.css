@@ -71,6 +71,29 @@ body {
     cursor: pointer;
 }
 
+#delete-completed {
+    width: 170px;
+    background-color: #d11a2a;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    margin-top: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#delete-pending {
+    width: 170px;
+    background-color: #d11a2a;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    margin-top: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 #task-list {
     list-style: none;
     display: flex;

@@ -18,8 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(taskArray.length == 0) {
             document.querySelector("#delete-all").classList.add("hidden");
+            document.querySelector("#delete-completed").classList.add("hidden");
+            document.querySelector("#delete-pending").classList.add("hidden");
         } else {
             document.querySelector("#delete-all").classList.remove("hidden");
+            document.querySelector("#delete-completed").classList.remove("hidden");
+            document.querySelector("#delete-pending").classList.remove("hidden");
         }
 
         taskArray.forEach((taskItem) => {
@@ -37,6 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
             taskList.appendChild(taskToAdd);
         })
+    }
+
+    function deleteData(targetId) {
+        taskArray = taskArray.filter((task) => task.id != targetId);
+
+        renderData();
+        saveData();
     }
 
     function onEnter(fn) {
@@ -71,11 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#task-list").addEventListener("click", (event) => {
         if(event.target.tagName === "BUTTON") {
             let targetId =  event.target.parentElement.getAttribute("id");
-            taskArray = taskArray.filter((task) => task.id != targetId);
-
-            renderData();
-            saveData();
-            
+            deleteData(targetId);            
         } else if(event.target.tagName === "LI") {
             let targetId =  event.target.getAttribute("id");
 
@@ -97,5 +104,21 @@ document.addEventListener("DOMContentLoaded", () => {
         taskArray.length = 0;
         renderData();
         saveData();
+    })
+
+    document.querySelector("#delete-completed").addEventListener("click", () => {
+        taskArray.forEach((taskItem) => {
+            if(taskItem.status == true) {
+                deleteData(taskItem.id);                
+            }
+        })
+    })
+
+    document.querySelector("#delete-pending").addEventListener("click", () => {
+        taskArray.forEach((taskItem) => {
+            if(taskItem.status == false) {
+                deleteData(taskItem.id);                
+            }
+        })
     })
 })
