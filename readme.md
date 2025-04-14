@@ -24,7 +24,7 @@ A simple and interactive To-Do List built using HTML, CSS, and JavaScript. This 
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:<your-username>/<repo-name>.git
+   git clone git@github.com:<your-username>/ToDo-List.git
 
 2. Open index.html in your browser
 
