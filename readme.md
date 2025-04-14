@@ -26,9 +26,9 @@ A simple and interactive To-Do List built using HTML, CSS, and JavaScript. This 
    ```bash
    git clone git@github.com:<your-username>/<repo-name>.git
 
-- Open index.html in your browser
+2. Open index.html in your browser
 
-- Start adding tasks and manage your day!
+3. Start adding tasks and manage your day!
 
 ## What I Learned
 - DOM manipulation using JavaScript
