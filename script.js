@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderData() {
         taskList.innerHTML = "";
 
+        if(taskArray.length == 0) {
+            document.querySelector("#delete-all").classList.add("hidden");
+        } else {
+            document.querySelector("#delete-all").classList.remove("hidden");
+        }
+
         taskArray.forEach((taskItem) => {
 
             let taskToAdd = document.createElement("li");

@@ -106,3 +106,7 @@ body {
 .task-done-btn p {
     text-decoration: line-through;
 }
+
+.hidden {
+    display: none;
+}
