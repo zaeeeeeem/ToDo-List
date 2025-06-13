@@ -1,5 +1,4 @@
-# 📝 To-Do List – JavaScript Practice Project
-
+# 📝 To-Do List
 A simple and interactive To-Do List built using HTML, CSS, and JavaScript. This project is part of my practice journey to sharpen JavaScript DOM manipulation and event handling skills.
 
 ## 🚀 Features
